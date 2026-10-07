@@ -5,138 +5,158 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
 <title>Stavba s radostí – stavební firma ze šumavského podhůří</title>
-<meta name="description" content="Rekonstrukce, novostavby, dřevostavby a půdní vestavby v jižních Čechách. Zdarma vás navštívíme a připravíme ucelený rozpočet.">
+<meta name="description" content="Rekonstrukce, novostavby, dřevostavby, půdní vestavby a střechy v jižních Čechách. Zdarma vás navštívíme a připravíme ucelený rozpočet.">
 <link rel="icon" href="img/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{
-  --lime:#B4BF41; --lime-soft:#eef1cf; --forest:#263E0E; --forest-2:#34521a;
-  --ink:#1c2414; --muted:#5c6650; --line:#dfe3cf; --paper:#fbfbf6; --white:#fff;
-  --radius:18px; --shadow:0 18px 40px -22px rgba(38,62,14,.45);
+  --lime:#B4BF41; --lime-2:#c9d35c; --lime-soft:#f1f4d8;
+  --forest:#263E0E; --forest-2:#1a2c08; --forest-3:#34521a;
+  --ink:#16200d; --muted:#5d6750; --line:#e3e7d3; --paper:#f7f8f1; --white:#fff;
+  --r:22px; --shadow:0 30px 60px -30px rgba(26,44,8,.55);
+  --head:"Bricolage Grotesque",Manrope,system-ui,sans-serif;
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{margin:0;font-family:Manrope,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink);background:var(--paper);line-height:1.6;font-size:17px}
+body{margin:0;font-family:Manrope,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink);background:var(--paper);line-height:1.6;font-size:17px;-webkit-font-smoothing:antialiased}
 img{max-width:100%;display:block}
 a{color:inherit}
-.wrap{max-width:1180px;margin:0 auto;padding-inline:20px}
-/* header */
-header{position:sticky;top:0;z-index:20;background:rgba(251,251,246,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
-.nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:12px}
-.brand{display:flex;align-items:center;gap:12px;text-decoration:none}
-.brand img{height:46px;width:auto}
-.menu{display:flex;gap:26px;align-items:center}
-.menu a{text-decoration:none;font-weight:600;color:var(--forest);font-size:15px}
-.menu a:hover{color:var(--forest-2);text-decoration:underline;text-underline-offset:6px;text-decoration-color:var(--lime)}
-.btn{display:inline-flex;align-items:center;gap:8px;background:var(--forest);color:var(--white)!important;text-decoration:none;font-weight:700;padding:12px 20px;border-radius:999px;transition:.2s;border:2px solid var(--forest)}
-.btn:hover{background:var(--forest-2);text-decoration:none!important}
-.btn.ghost{background:transparent;color:var(--forest)!important}
-.btn.ghost:hover{background:var(--lime-soft)}
-.burger{display:none;background:none;border:0;font-size:28px;color:var(--forest);cursor:pointer}
-/* hero */
-.hero{position:relative;min-height:min(78vh,680px);display:flex;align-items:flex-end;color:var(--white);overflow:hidden}
-.hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(18,30,6,.15) 0%,rgba(18,30,6,.35) 45%,rgba(18,30,6,.85) 100%)}
-.hero .wrap{position:relative;z-index:2;padding-block:70px 60px;width:100%}
-.eyebrow{display:inline-block;background:var(--lime);color:var(--forest);font-weight:800;font-size:13px;letter-spacing:.08em;text-transform:uppercase;padding:6px 14px;border-radius:999px}
-.hero h1{font-size:clamp(40px,7vw,78px);line-height:1.02;margin:18px 0 14px;font-weight:800;letter-spacing:-.02em}
-.hero p{font-size:clamp(17px,2vw,21px);max-width:620px;margin:0 0 28px;color:#eef2e2}
-.hero .actions{display:flex;flex-wrap:wrap;gap:12px}
-.hero .btn.ghost{color:var(--white)!important;border-color:rgba(255,255,255,.7)}
-.hero .btn.ghost:hover{background:rgba(255,255,255,.12)}
-/* stats */
-.stats{background:var(--forest);color:var(--white)}
-.stats .wrap{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;padding-block:28px}
-.stat b{display:block;font-size:30px;color:var(--lime);font-weight:800;line-height:1.1}
-.stat span{font-size:15px;color:#d8e0c6}
-/* sections */
-section{padding-block:90px}
-.kicker{color:var(--forest-2);font-weight:800;font-size:14px;letter-spacing:.1em;text-transform:uppercase}
-h2{font-size:clamp(30px,4vw,46px);line-height:1.1;margin:10px 0 18px;letter-spacing:-.015em;color:var(--forest)}
-.lead{font-size:19px;color:var(--muted);max-width:720px}
-.about{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
-.about figure{margin:0;position:relative}
-.about figure img{border-radius:var(--radius);box-shadow:var(--shadow);aspect-ratio:4/3;object-fit:cover;width:100%}
-.quote{position:absolute;left:-24px;bottom:-28px;max-width:330px;background:var(--lime);color:var(--forest);padding:20px 22px;border-radius:16px;font-weight:700;font-size:16px;line-height:1.45;box-shadow:var(--shadow)}
-.checks{list-style:none;padding:0;margin:24px 0 0;display:grid;gap:12px}
-.checks li{display:flex;gap:12px;align-items:flex-start}
-.checks li::before{content:"";flex:0 0 22px;height:22px;margin-top:3px;border-radius:50%;background:var(--lime) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='none' stroke='%23263E0E' stroke-width='3' d='M6 12.5l4 4 8-9'/%3E%3C/svg%3E") center/14px no-repeat}
-/* services */
-.services{background:var(--white);border-block:1px solid var(--line)}
-.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:40px}
-.card{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:22px 20px;transition:.2s}
-.card:hover{transform:translateY(-3px);box-shadow:var(--shadow);border-color:var(--lime)}
-.card .ic{width:44px;height:44px;border-radius:12px;background:var(--lime-soft);display:grid;place-items:center;margin-bottom:14px}
-.card .ic svg{width:24px;height:24px;stroke:var(--forest);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
-.card h3{margin:0;font-size:17px;color:var(--forest);line-height:1.3}
-.note{margin-top:26px;color:var(--muted);font-size:16px}
-/* process */
-.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:40px;counter-reset:s}
-.step{position:relative;padding:26px 22px;border-radius:16px;background:var(--forest);color:#e8eed8}
-.step::before{counter-increment:s;content:counter(s);display:grid;place-items:center;width:40px;height:40px;border-radius:50%;background:var(--lime);color:var(--forest);font-weight:800;margin-bottom:14px}
-.step h3{margin:0 0 6px;color:var(--white);font-size:18px}
-.step p{margin:0;font-size:15px}
-/* gallery */
-.gallery{display:grid;grid-auto-flow:dense;grid-template-columns:repeat(4,1fr);grid-auto-rows:210px;gap:12px;margin-top:40px}
-.gallery a{border-radius:14px;overflow:hidden;position:relative}
-.gallery img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
-.gallery a:hover img{transform:scale(1.05)}
-.gallery .big{grid-column:span 2;grid-row:span 2}
-/* lightbox */
-.lb{position:fixed;inset:0;background:rgba(12,18,6,.92);display:none;align-items:center;justify-content:center;z-index:50;padding:20px}
+.wrap{max-width:1200px;margin:0 auto;padding-inline:20px}
+h1,h2,h3{font-family:var(--head);letter-spacing:-.02em;line-height:1.05;margin:0}
+header{position:fixed;inset:0 0 auto 0;z-index:30;transition:background .3s,box-shadow .3s}
+header.solid{background:rgba(26,44,8,.92);backdrop-filter:blur(12px);box-shadow:0 10px 30px -20px rgba(0,0,0,.6)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:16px}
+.brand img{height:44px;width:auto}
+.menu{display:flex;gap:28px;align-items:center}
+.menu a{text-decoration:none;font-weight:600;color:#e9efd8;font-size:15px}
+.menu a:hover{color:var(--lime)}
+.btn{display:inline-flex;align-items:center;gap:10px;background:var(--lime);color:var(--forest-2)!important;text-decoration:none;font-weight:800;padding:13px 22px;border-radius:999px;transition:.25s;border:0;font-size:15px}
+.btn:hover{background:var(--lime-2);transform:translateY(-2px)}
+.btn .arr{display:inline-grid;place-items:center;width:24px;height:24px;border-radius:50%;background:var(--forest);color:var(--lime);font-size:13px}
+.btn.line{background:transparent;color:#fff!important;box-shadow:inset 0 0 0 2px rgba(255,255,255,.4)}
+.btn.line:hover{box-shadow:inset 0 0 0 2px var(--lime)}
+.burger{display:none;background:none;border:0;font-size:30px;color:#fff;cursor:pointer}
+.hero{background:radial-gradient(1200px 600px at 85% 10%,#3b5a1d 0%,transparent 60%),var(--forest-2);color:#fff;padding:130px 0 80px;overflow:hidden;position:relative}
+.hero::before{content:"";position:absolute;right:-120px;bottom:-160px;width:520px;height:520px;border-radius:50%;background:var(--lime);opacity:.08}
+.hgrid{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center;position:relative}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-weight:700;font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--lime)}
+.eyebrow::before{content:"";width:28px;height:2px;background:var(--lime)}
+.hero h1{font-size:clamp(46px,7.4vw,96px);font-weight:800;margin:20px 0 22px}
+.hero h1 em{font-style:normal;color:var(--lime);position:relative;white-space:nowrap}
+.hero p.lead{font-size:clamp(17px,1.6vw,20px);color:#d3dcc0;max-width:540px;margin:0 0 32px}
+.actions{display:flex;gap:12px;flex-wrap:wrap}
+.hphoto{position:relative}
+.hphoto img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:28px;box-shadow:var(--shadow)}
+.badge{position:absolute;background:rgba(255,255,255,.94);backdrop-filter:blur(8px);color:var(--forest-2);border-radius:18px;padding:14px 18px;box-shadow:0 20px 40px -20px rgba(0,0,0,.5)}
+.badge b{display:block;font-family:var(--head);font-size:30px;line-height:1;color:var(--forest)}
+.badge span{font-size:13px;font-weight:700;color:var(--muted)}
+.b1{left:-28px;bottom:42px}
+.b2{right:-18px;top:36px;background:var(--lime)}
+.b2 b{color:var(--forest-2)} .b2 span{color:var(--forest)}
+.marquee{background:var(--lime);color:var(--forest-2);overflow:hidden;white-space:nowrap;border-block:1px solid #a3ad35}
+.track{display:inline-flex;gap:46px;padding:16px 0;animation:mq 38s linear infinite;font-family:var(--head);font-weight:700;font-size:20px}
+.track span::after{content:"✦";margin-left:46px;color:var(--forest-3)}
+@keyframes mq{to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){.track{animation:none}}
+section{padding-block:110px}
+.kicker{display:inline-flex;align-items:center;gap:10px;color:var(--forest-3);font-weight:800;font-size:13px;letter-spacing:.14em;text-transform:uppercase}
+.kicker::before{content:"";width:22px;height:2px;background:var(--lime)}
+h2{font-size:clamp(34px,4.6vw,58px);margin:14px 0 18px;color:var(--forest-2)}
+.sub{font-size:19px;color:var(--muted);max-width:640px;margin:0}
+.about{display:grid;grid-template-columns:.95fr 1.05fr;gap:70px;align-items:center}
+.collage{position:relative;padding:0 40px 60px 0}
+.collage img{border-radius:var(--r);object-fit:cover;box-shadow:var(--shadow)}
+.collage .c1{width:100%;aspect-ratio:4/5}
+.collage .c2{position:absolute;right:0;bottom:0;width:52%;aspect-ratio:1;border:8px solid var(--paper)}
+.quote{margin:28px 0 0;padding:24px 26px;border-left:4px solid var(--lime);background:var(--white);border-radius:0 18px 18px 0;font-weight:700;font-size:18px;color:var(--forest);line-height:1.5}
+.ticks{list-style:none;padding:0;margin:26px 0 0;display:grid;grid-template-columns:1fr 1fr;gap:14px 24px}
+.ticks li{display:flex;gap:12px;font-size:16px;color:var(--ink)}
+.ticks li::before{content:"";flex:0 0 22px;height:22px;margin-top:2px;border-radius:7px;background:var(--lime) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='none' stroke='%231a2c08' stroke-width='3' d='M6 12.5l4 4 8-9'/%3E%3C/svg%3E") center/14px no-repeat}
+.services{background:var(--white);border-radius:40px 40px 0 0}
+.bento{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:240px;gap:16px;margin-top:46px}
+.tile{position:relative;border-radius:var(--r);overflow:hidden;background:var(--paper);border:1px solid var(--line)}
+.tile.img{border:0;color:#fff}
+.tile.img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.tile.img:hover img{transform:scale(1.06)}
+.tile.img::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 35%,rgba(16,28,4,.85))}
+.tile .t{position:absolute;left:22px;right:22px;bottom:20px;z-index:2}
+.tile h3{font-size:26px}
+.tile p{margin:6px 0 0;font-size:15px;color:#dde5c9}
+.tile.wide{grid-column:span 2}.tile.tall{grid-row:span 2}
+.tile.list{padding:26px;display:flex;flex-direction:column;justify-content:space-between;background:var(--forest);border:0;color:#e5ecd2}
+.tile.list h3{color:#fff;font-size:24px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.chips span{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);padding:7px 12px;border-radius:999px;font-size:14px;font-weight:600}
+.tile.lime{background:var(--lime);border:0;padding:26px;display:flex;flex-direction:column;justify-content:space-between}
+.tile.lime h3{color:var(--forest-2);font-size:24px}
+.tile.lime p{color:var(--forest);font-weight:600}
+.process{background:var(--white)}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:50px;position:relative}
+.steps::before{content:"";position:absolute;left:4%;right:4%;top:30px;height:2px;background:repeating-linear-gradient(90deg,var(--lime) 0 10px,transparent 10px 18px)}
+.step{position:relative;padding:0 18px}
+.num{width:60px;height:60px;border-radius:50%;display:grid;place-items:center;background:var(--forest);color:var(--lime);font-family:var(--head);font-weight:800;font-size:22px;position:relative;z-index:1;box-shadow:0 0 0 8px var(--white)}
+.step h3{font-size:22px;margin:22px 0 8px;color:var(--forest-2)}
+.step p{margin:0;color:var(--muted);font-size:16px}
+.gal{columns:3 280px;column-gap:16px;margin-top:46px}
+.gal a{display:block;margin-bottom:16px;border-radius:18px;overflow:hidden;break-inside:avoid;position:relative}
+.gal img{width:100%;transition:transform .6s}
+.gal a:hover img{transform:scale(1.04)}
+.gal a span{position:absolute;left:12px;bottom:12px;background:rgba(255,255,255,.9);color:var(--forest-2);font-size:13px;font-weight:700;padding:6px 10px;border-radius:999px}
+.lb{position:fixed;inset:0;background:rgba(10,16,4,.94);display:none;align-items:center;justify-content:center;z-index:60;padding:20px}
 .lb.on{display:flex}
-.lb img{max-height:88vh;border-radius:12px}
-.lb button{position:absolute;top:16px;right:20px;background:none;border:0;color:#fff;font-size:38px;cursor:pointer}
-/* contact */
-.contact{background:linear-gradient(135deg,var(--forest) 0%,#1b2d09 100%);color:#e8eed8}
-.contact h2{color:var(--white)}
-.contact .lead{color:#cdd8b6}
-.cgrid{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;margin-top:36px;align-items:start}
-.cbox{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:18px;padding:28px}
-.person{font-size:22px;font-weight:800;color:var(--white)}
-.role{color:var(--lime);font-weight:700;margin-bottom:18px}
-.cline{display:flex;gap:12px;align-items:center;margin:10px 0;font-size:19px;font-weight:600}
-.cline a{text-decoration:none;color:var(--white)}
-.cline a:hover{color:var(--lime)}
-.cline svg{width:22px;height:22px;stroke:var(--lime);fill:none;stroke-width:2}
-.small{font-size:15px;color:#c1cca9;line-height:1.7}
-.small b{color:#e8eed8}
-.contact .btn{background:var(--lime);border-color:var(--lime);color:var(--forest)!important}
-.contact .btn:hover{background:#c6d058}
-footer{background:#121d06;color:#9fac85;font-size:14px}
+.lb img{max-height:88vh;border-radius:14px}
+.lb button{position:absolute;top:14px;right:22px;background:none;border:0;color:#fff;font-size:42px;cursor:pointer}
+.contact{background:var(--forest-2);color:#dfe7cb;border-radius:40px 40px 0 0;position:relative;overflow:hidden}
+.contact::before{content:"";position:absolute;left:-140px;top:-140px;width:420px;height:420px;border-radius:50%;background:var(--lime);opacity:.07}
+.contact h2{color:#fff}
+.contact .sub{color:#c3cfac}
+.cgrid{display:grid;grid-template-columns:1.2fr .8fr;gap:30px;margin-top:44px;position:relative}
+.card{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:var(--r);padding:32px}
+.person{font-family:var(--head);font-size:30px;color:#fff;font-weight:700}
+.role{color:var(--lime);font-weight:700;margin:4px 0 22px}
+.big{display:flex;flex-direction:column;gap:12px}
+.big a{display:flex;align-items:center;gap:14px;text-decoration:none;font-size:22px;font-weight:700;color:#fff;padding:16px 18px;border-radius:16px;background:rgba(255,255,255,.06);transition:.2s}
+.big a:hover{background:var(--lime);color:var(--forest-2)}
+.big svg{width:24px;height:24px;stroke:currentColor;fill:none;stroke-width:2;flex:0 0 24px}
+.small{font-size:15px;line-height:1.8;color:#b9c6a0}
+.small b{display:block;color:#fff;font-size:16px;margin-top:6px}
+footer{background:#0f1904;color:#8e9b74;font-size:14px}
 footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-block:22px}
-/* responsive */
-@media (max-width:980px){
-  .grid{grid-template-columns:repeat(2,1fr)}
-  .steps{grid-template-columns:repeat(2,1fr)}
-  .about,.cgrid{grid-template-columns:1fr}
-  .quote{position:static;margin-top:-30px;margin-left:16px;max-width:none}
-  .gallery{grid-template-columns:repeat(2,1fr);grid-auto-rows:170px}
+@media (max-width:1000px){
+  .hgrid,.about,.cgrid{grid-template-columns:1fr}
+  .hphoto{max-width:520px}
+  .bento{grid-template-columns:repeat(2,1fr)}
+  .steps{grid-template-columns:1fr 1fr;gap:34px}
+  .steps::before{display:none}
 }
 @media (max-width:760px){
-  .menu{display:none;position:absolute;top:70px;left:0;right:0;background:var(--paper);flex-direction:column;padding:20px;border-bottom:1px solid var(--line)}
+  .menu{display:none;position:absolute;top:72px;left:0;right:0;background:var(--forest-2);flex-direction:column;padding:22px;gap:18px}
   .menu.open{display:flex}
   .burger{display:block}
-  section{padding-block:64px}
-  .stats .wrap{grid-template-columns:1fr;gap:14px}
-  .grid{grid-template-columns:1fr 1fr}
+  section{padding-block:76px}
+  .hero{padding-top:110px}
+  .b1{left:10px}.b2{right:10px}
+  .ticks{grid-template-columns:1fr}
+  .bento{grid-template-columns:1fr;grid-auto-rows:220px}
+  .tile.wide,.tile.tall{grid-column:auto;grid-row:auto}
   .steps{grid-template-columns:1fr}
+  .big a{font-size:18px}
+  .collage{padding:0 24px 40px 0}
 }
-@media (max-width:420px){.grid{grid-template-columns:1fr}.gallery .big{grid-column:span 2;grid-row:span 1}}
 </style>
 </head>
 <body>
 
-<header>
+<header id="hdr">
   <div class="wrap nav">
-    <a class="brand" href="#top" aria-label="Stavba s radostí – úvod"><img src="img/logo.svg" alt="Stavba s radostí"></a>
+    <a class="brand" href="#top" aria-label="Stavba s radostí"><img src="img/logo-light.png" alt="Stavba s radostí"></a>
     <nav class="menu" id="menu">
       <a href="#o-nas">O nás</a>
       <a href="#sluzby">Služby</a>
       <a href="#postup">Jak pracujeme</a>
-      <a href="#galerie">Fotogalerie</a>
+      <a href="#galerie">Realizace</a>
       <a class="btn" href="#kontakt">Poptat služby</a>
     </nav>
     <button class="burger" aria-label="Menu" onclick="document.getElementById('menu').classList.toggle('open')">☰</button>
@@ -144,120 +164,124 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
 </header>
 
 <main id="top">
-  <div class="hero">
-    <img src="img/foto01.jpg" alt="Dokončený rodinný dům">
-    <div class="wrap">
-      <span class="eyebrow">Stavební firma ze šumavského podhůří</span>
-      <h1>Stavíme<br>s radostí</h1>
-      <p>Rekonstrukce, novostavby, dřevostavby i půdní vestavby v jižních Čechách. Ucelené řešení – přehledně a srozumitelně.</p>
-      <div class="actions">
-        <a class="btn" href="#kontakt">Nezávazná poptávka</a>
-        <a class="btn ghost" href="#sluzby">Co děláme</a>
+  <section class="hero">
+    <div class="wrap hgrid">
+      <div>
+        <span class="eyebrow">Stavební firma ze šumavského podhůří</span>
+        <h1>Stavíme<br><em>s radostí.</em></h1>
+        <p class="lead">Rekonstrukce domů a bytů, novostavby, dřevostavby, půdní vestavby i střechy v jižních Čechách. Ucelené řešení – přehledně a srozumitelně.</p>
+        <div class="actions">
+          <a class="btn" href="#kontakt">Nezávazná poptávka <span class="arr">→</span></a>
+          <a class="btn line" href="#galerie">Naše realizace</a>
+        </div>
+      </div>
+      <div class="hphoto">
+        <img src="img/real03.jpg" alt="Plechová střecha s vikýři po rekonstrukci">
+        <div class="badge b1"><b>20+ let</b><span>praxe v oboru</span></div>
+        <div class="badge b2"><b>Zdarma</b><span>návštěva a rozpočet</span></div>
       </div>
     </div>
-  </div>
+  </section>
 
-  <div class="stats">
-    <div class="wrap">
-      <div class="stat"><b>20+ let</b><span>praxe v oboru</span></div>
-      <div class="stat"><b>Jižní Čechy</b><span>pracujeme výhradně v regionu</span></div>
-      <div class="stat"><b>Zdarma</b><span>návštěva, návrh řešení a rozpočet</span></div>
+  <div class="marquee" aria-hidden="true">
+    <div class="track">
+      <span>Rekonstrukce domů</span><span>Půdní vestavby</span><span>Novostavby</span><span>Dřevostavby</span><span>Střechy</span><span>Zateplení</span><span>Sádrokartony</span><span>Obklady a dlažby</span>
+      <span>Rekonstrukce domů</span><span>Půdní vestavby</span><span>Novostavby</span><span>Dřevostavby</span><span>Střechy</span><span>Zateplení</span><span>Sádrokartony</span><span>Obklady a dlažby</span>
     </div>
   </div>
 
   <section id="o-nas">
     <div class="wrap about">
-      <div>
-        <div class="kicker">O nás</div>
-        <h2>Stavba nemusí být starost. Může být radost.</h2>
-        <p class="lead">Uvědomujeme si, že pro mnohé z vás je stavba či rekonstrukce domu náročný úkon, se kterým si nemusíte vždy vědět rady. Naší hlavní prioritou je nabídnout vám ucelené řešení vašich požadavků – přehledně a srozumitelně.</p>
-        <ul class="checks">
-          <li>Nabídku stavíme na více než dvacetileté praxi v oboru.</li>
-          <li>Pracujeme výhradně v jižních Čechách, kde máme bohaté kontakty na všechna řemesla.</li>
-          <li>Co sami nepokryjeme, doporučíme spolehlivého řemeslníka nebo firmu.</li>
-          <li>Kromě stavebních prací nabízíme i poradenství a projektovou dokumentaci.</li>
-        </ul>
+      <div class="collage">
+        <img class="c1" src="img/real06.jpg" alt="Dokončené podkroví">
+        <img class="c2" src="img/real10.jpg" alt="Klenutý interiér po rekonstrukci">
       </div>
-      <figure>
-        <img src="img/real06.jpg" alt="Dokončené podkroví">
-        <div class="quote">„Snažíme se být ke svým zákazníkům komunikativní, vstřícní a celý proces zrealizovat tak, aby byla radost s námi stavět.“</div>
-      </figure>
+      <div>
+        <span class="kicker">O nás</span>
+        <h2>Stavba nemusí být starost. Může být radost.</h2>
+        <p class="sub">Uvědomujeme si, že pro mnohé z vás je stavba či rekonstrukce domu náročný úkon, se kterým si nemusíte vždy vědět rady. Naší prioritou je nabídnout vám ucelené řešení – přehledně a srozumitelně.</p>
+        <ul class="ticks">
+          <li>Více než dvacetiletá praxe v oboru</li>
+          <li>Pracujeme výhradně v jižních Čechách</li>
+          <li>Kontakty na všechna řemesla v regionu</li>
+          <li>Poradenství i projektová dokumentace</li>
+        </ul>
+        <p class="quote">„Snažíme se být ke svým zákazníkům komunikativní, vstřícní a celý proces zrealizovat tak, aby byla radost s námi stavět.“</p>
+      </div>
     </div>
   </section>
 
   <section id="sluzby" class="services">
     <div class="wrap">
-      <div class="kicker">Služby</div>
-      <h2>Kompletní stavební práce pod jednou střechou</h2>
-      <p class="lead">Nabízíme ucelený sortiment stavebních prací, vyhotovíme projektovou dokumentaci a poskytujeme poradenskou činnost.</p>
-      <div class="grid">
-        <div class="card"><div class="ic"><svg viewBox="0 0 24 24"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/><path d="M10 20v-5h4v5"/></svg></div><h3>Rekonstrukce starých domů a venkovských stavení</h3></div>
-        <div class="card"><div class="ic"><svg viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="1"/><path d="M8 7h3M13 7h3M8 11h3M13 11h3M8 15h3M13 15h3"/></svg></div><h3>Rekonstrukce bytů</h3></div>
-        <div class="card"><div class="ic"><svg viewBox="0 0 24 24"><path d="M3 21h18"/><path d="M5 21V9l7-5 7 5v12"/><path d="M9 21v-6h6v6"/></svg></div><h3>Realizace novostaveb</h3></div>
-        <div class="card"><div class="ic"><svg viewBox="0 0 24 24"><path d="M4 20V8l8-5 8 5v12"/><path d="M8 20v-8M12 20v-8M16 20v-8"/></svg></div><h3>Dřevostavby</h3></div>
-        <div class="card"><div class="ic"><svg viewBox="0 0 24 24"><path d="M3 20L12 4l9 16z"/><path d="M8 20v-5h8v5"/></svg></div><h3>Půdní vestavby</h3></div>
-        <div class="card"><div class="ic"><svg viewBox="0 0 24 24"><path d="M3 10l9-6 9 6"/><path d="M4 9l8 5 8-5"/></svg></div><h3>Opravy a rekonstrukce střech</h3></div>
-        <div class="card"><div class="ic"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="1"/><path d="M3 9h18M3 14h18M9 4v16M15 4v16"/></svg></div><h3>Zateplování budov</h3></div>
-        <div class="card"><div class="ic"><svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16"/><path d="M4 12h16M12 4v16"/></svg></div><h3>Sádrokartony</h3></div>
-        <div class="card"><div class="ic"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="8" height="8"/><rect x="13" y="3" width="8" height="8"/><rect x="3" y="13" width="8" height="8"/><rect x="13" y="13" width="8" height="8"/></svg></div><h3>Obklady a dlažby</h3></div>
-        <div class="card"><div class="ic"><svg viewBox="0 0 24 24"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></svg></div><h3>Elektroinstalace</h3></div>
-        <div class="card"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3c3 4 6 7 6 11a6 6 0 0 1-12 0c0-4 3-7 6-11z"/></svg></div><h3>Vodoinstalace</h3></div>
-        <div class="card"><div class="ic"><svg viewBox="0 0 24 24"><path d="M4 21V8M10 21V8M16 21V8M20 21V8"/><path d="M2 12h20M2 17h20"/></svg></div><h3>Ploty</h3></div>
+      <span class="kicker">Služby</span>
+      <h2>Kompletní stavební práce<br>pod jednou střechou</h2>
+      <p class="sub">Nabízíme ucelený sortiment stavebních prací, vyhotovíme projektovou dokumentaci a poskytujeme poradenskou činnost.</p>
+      <div class="bento">
+        <div class="tile img wide tall"><img src="img/real09.jpg" alt="Půdní vestavba"><div class="t"><h3>Půdní vestavby</h3><p>Z nevyužité půdy plnohodnotné bydlení.</p></div></div>
+        <div class="tile img"><img src="img/real02.jpg" alt="Střecha"><div class="t"><h3>Střechy</h3><p>Opravy a rekonstrukce střech</p></div></div>
+        <div class="tile img"><img src="img/real10.jpg" alt="Rekonstrukce"><div class="t"><h3>Rekonstrukce</h3><p>Staré domy, venkovská stavení, byty</p></div></div>
+        <div class="tile lime"><h3>Novostavby a dřevostavby</h3><p>Realizace novostaveb i dřevostaveb.</p></div>
+        <div class="tile img"><img src="img/real08.jpg" alt="Zateplení a fasáda"><div class="t"><h3>Zateplení</h3><p>Zateplování budov</p></div></div>
+        <div class="tile list wide">
+          <h3>A také</h3>
+          <div class="chips"><span>Sádrokartony</span><span>Obklady a dlažby</span><span>Elektroinstalace</span><span>Vodoinstalace</span><span>Ploty</span><span>Projektová dokumentace</span><span>Poradenství</span></div>
+        </div>
+        <div class="tile img wide"><img src="img/real07.jpg" alt="Koupelna"><div class="t"><h3>Koupelny a interiéry</h3><p>Obklady, dlažby a instalace</p></div></div>
       </div>
-      <p class="note">Nenašli jste, co potřebujete? Ozvěte se – co nezvládneme sami, rádi doporučíme ověřeného řemeslníka.</p>
     </div>
   </section>
 
-  <section id="postup">
+  <section id="postup" class="process">
     <div class="wrap">
-      <div class="kicker">Jak pracujeme</div>
+      <span class="kicker">Jak pracujeme</span>
       <h2>Od první návštěvy po hotovou stavbu</h2>
       <div class="steps">
-        <div class="step"><h3>Návštěva zdarma</h3><p>Přijedeme k vám a probereme, co potřebujete.</p></div>
-        <div class="step"><h3>Návrh řešení</h3><p>Navrhneme ideální řešení podle vašich požadavků.</p></div>
-        <div class="step"><h3>Ucelený rozpočet</h3><p>Předložíme přehledný rozpočet celé zakázky.</p></div>
-        <div class="step"><h3>Rozhodnete se sami</h3><p>Nezávazně – a pak stavíme s radostí.</p></div>
+        <div class="step"><div class="num">1</div><h3>Návštěva zdarma</h3><p>Přijedeme k vám a probereme, co potřebujete.</p></div>
+        <div class="step"><div class="num">2</div><h3>Návrh řešení</h3><p>Navrhneme ideální řešení podle vašich požadavků.</p></div>
+        <div class="step"><div class="num">3</div><h3>Ucelený rozpočet</h3><p>Předložíme přehledný rozpočet celé zakázky.</p></div>
+        <div class="step"><div class="num">4</div><h3>Rozhodnete se sami</h3><p>Nezávazně. A pak stavíme s radostí.</p></div>
       </div>
     </div>
   </section>
 
-  <section id="galerie" class="services">
+  <section id="galerie">
     <div class="wrap">
-      <div class="kicker">Fotogalerie</div>
+      <span class="kicker">Realizace</span>
       <h2>Z našich posledních zakázek</h2>
-      <div class="gallery">
-        <a class="big" href="img/real02.jpg"><img loading="lazy" src="img/real02.jpg" alt="Plechová střecha s vikýři"></a>
-        <a href="img/real06.jpg"><img loading="lazy" src="img/real06.jpg" alt="Dokončené podkroví"></a>
-        <a href="img/real01.jpg"><img loading="lazy" src="img/real01.jpg" alt="Rekonstrukce střechy s pálenou krytinou"></a>
-        <a class="big" href="img/real10.jpg"><img loading="lazy" src="img/real10.jpg" alt="Klenutý interiér po rekonstrukci"></a>
-        <a href="img/real09.jpg"><img loading="lazy" src="img/real09.jpg" alt="Půdní vestavba s trámy"></a>
-        <a href="img/real08.jpg"><img loading="lazy" src="img/real08.jpg" alt="Fasáda a balkon"></a>
-        <a href="img/real05.jpg"><img loading="lazy" src="img/real05.jpg" alt="Pochozí terasa s hydroizolací"></a>
-        <a href="img/real12.jpg"><img loading="lazy" src="img/real12.jpg" alt="Půdní vestavba v průběhu"></a>
-        <a href="img/real11.jpg"><img loading="lazy" src="img/real11.jpg" alt="Podhled v podkroví"></a>
-        <a href="img/real07.jpg"><img loading="lazy" src="img/real07.jpg" alt="Koupelna a WC"></a>
-        <a href="img/real03.jpg"><img loading="lazy" src="img/real03.jpg" alt="Vikýře a plechová krytina"></a>
-        <a href="img/real04.jpg"><img loading="lazy" src="img/real04.jpg" alt="Hydroizolace ploché střechy"></a>
+      <div class="gal">
+        <a href="img/real03.jpg"><img loading="lazy" src="img/real03.jpg" alt="Vikýře a plechová krytina"><span>Střecha s vikýři</span></a>
+        <a href="img/real06.jpg"><img loading="lazy" src="img/real06.jpg" alt="Dokončené podkroví"><span>Podkroví</span></a>
+        <a href="img/real01.jpg"><img loading="lazy" src="img/real01.jpg" alt="Rekonstrukce střechy"><span>Střecha</span></a>
+        <a href="img/real10.jpg"><img loading="lazy" src="img/real10.jpg" alt="Klenutý interiér"><span>Rekonstrukce interiéru</span></a>
+        <a href="img/real09.jpg"><img loading="lazy" src="img/real09.jpg" alt="Půdní vestavba s trámy"><span>Půdní vestavba</span></a>
+        <a href="img/real08.jpg"><img loading="lazy" src="img/real08.jpg" alt="Fasáda a balkon"><span>Fasáda</span></a>
+        <a href="img/real05.jpg"><img loading="lazy" src="img/real05.jpg" alt="Pochozí terasa"><span>Terasa</span></a>
+        <a href="img/real12.jpg"><img loading="lazy" src="img/real12.jpg" alt="Půdní vestavba v průběhu"><span>V průběhu</span></a>
+        <a href="img/real11.jpg"><img loading="lazy" src="img/real11.jpg" alt="Podhled v podkroví"><span>Podhled</span></a>
+        <a href="img/real07.jpg"><img loading="lazy" src="img/real07.jpg" alt="Koupelna a WC"><span>Koupelna</span></a>
+        <a href="img/real02.jpg"><img loading="lazy" src="img/real02.jpg" alt="Plechová střecha"><span>Střecha</span></a>
+        <a href="img/real04.jpg"><img loading="lazy" src="img/real04.jpg" alt="Plochá střecha"><span>Plochá střecha</span></a>
       </div>
     </div>
   </section>
 
   <section id="kontakt" class="contact">
     <div class="wrap">
-      <div class="kicker" style="color:var(--lime)">Kontakt</div>
-      <h2>Spojte se s námi</h2>
-      <p class="lead">Napište nebo zavolejte – ozveme se a rádi vám pomůžeme.</p>
+      <span class="kicker" style="color:var(--lime)">Kontakt</span>
+      <h2>Pojďme stavět s radostí</h2>
+      <p class="sub">Napište nebo zavolejte – ozveme se a rádi vám pomůžeme.</p>
       <div class="cgrid">
-        <div class="cbox">
+        <div class="card">
           <div class="person">Mgr. Jan Loquenz</div>
           <div class="role">jednatel</div>
-          <div class="cline"><svg viewBox="0 0 24 24"><path d="M5 3h4l2 5-3 2a12 12 0 0 0 6 6l2-3 5 2v4a2 2 0 0 1-2 2A18 18 0 0 1 3 5a2 2 0 0 1 2-2z"/></svg><a href="tel:+420724968331">+420 724 968 331</a></div>
-          <div class="cline"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg><a href="mailto:info@stavbasradosti.cz">info@stavbasradosti.cz</a></div>
-          <p style="margin-top:22px"><a class="btn" href="mailto:info@stavbasradosti.cz?subject=Popt%C3%A1vka%20stavebn%C3%ADch%20prac%C3%AD">Poslat poptávku</a></p>
+          <div class="big">
+            <a href="tel:+420724968331"><svg viewBox="0 0 24 24"><path d="M5 3h4l2 5-3 2a12 12 0 0 0 6 6l2-3 5 2v4a2 2 0 0 1-2 2A18 18 0 0 1 3 5a2 2 0 0 1 2-2z"/></svg>+420 724 968 331</a>
+            <a href="mailto:info@stavbasradosti.cz"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>info@stavbasradosti.cz</a>
+          </div>
         </div>
-        <div class="small">
-          <p><b>Sídlo firmy</b><br>Libotyně 4<br>384 81 Radhostice</p>
-          <p><b>Fakturační údaje</b><br>LQ Group s.r.o.<br>Boušice 8, Benešov u Prahy<br>IČO 08043515 · DIČ CZ08043515</p>
+        <div class="card small">
+          <b>Sídlo firmy</b>Libotyně 4<br>384 81 Radhostice
+          <b style="margin-top:18px">Fakturační údaje</b>LQ Group s.r.o.<br>Boušice 8, Benešov u Prahy<br>IČO 08043515 · DIČ CZ08043515
         </div>
       </div>
     </div>
@@ -273,7 +297,8 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
 
 <div class="lb" id="lb" onclick="this.classList.remove('on')"><button aria-label="Zavřít">×</button><img id="lbimg" alt=""></div>
 <script>
-document.querySelectorAll('.gallery a').forEach(a=>a.addEventListener('click',e=>{e.preventDefault();document.getElementById('lbimg').src=a.getAttribute('href');document.getElementById('lb').classList.add('on')}));
+const h=document.getElementById('hdr');const onS=()=>h.classList.toggle('solid',scrollY>40);onS();addEventListener('scroll',onS,{passive:true});
+document.querySelectorAll('.gal a').forEach(a=>a.addEventListener('click',e=>{e.preventDefault();document.getElementById('lbimg').src=a.getAttribute('href');document.getElementById('lb').classList.add('on')}));
 document.querySelectorAll('.menu a').forEach(a=>a.addEventListener('click',()=>document.getElementById('menu').classList.remove('open')));
 </script>
 </body>
