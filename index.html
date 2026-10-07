@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Stavba s radostí – stavební firma ze šumavského podhůří</title>
+<meta name="description" content="Rekonstrukce, novostavby, dřevostavby a půdní vestavby v jižních Čechách. Zdarma vás navštívíme a připravíme ucelený rozpočet.">
+<link rel="icon" href="img/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --lime:#B4BF41; --lime-soft:#eef1cf; --forest:#263E0E; --forest-2:#34521a;
+  --ink:#1c2414; --muted:#5c6650; --line:#dfe3cf; --paper:#fbfbf6; --white:#fff;
+  --radius:18px; --shadow:0 18px 40px -22px rgba(38,62,14,.45);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Manrope,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink);background:var(--paper);line-height:1.6;font-size:17px}
+img{max-width:100%;display:block}
+a{color:inherit}
+.wrap{max-width:1180px;margin:0 auto;padding-inline:20px}
+/* header */
+header{position:sticky;top:0;z-index:20;background:rgba(251,251,246,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:12px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+.brand img{height:46px;width:auto}
+.menu{display:flex;gap:26px;align-items:center}
+.menu a{text-decoration:none;font-weight:600;color:var(--forest);font-size:15px}
+.menu a:hover{color:var(--forest-2);text-decoration:underline;text-underline-offset:6px;text-decoration-color:var(--lime)}
+.btn{display:inline-flex;align-items:center;gap:8px;background:var(--forest);color:var(--white)!important;text-decoration:none;font-weight:700;padding:12px 20px;border-radius:999px;transition:.2s;border:2px solid var(--forest)}
+.btn:hover{background:var(--forest-2);text-decoration:none!important}
+.btn.ghost{background:transparent;color:var(--forest)!important}
+.btn.ghost:hover{background:var(--lime-soft)}
+.burger{display:none;background:none;border:0;font-size:28px;color:var(--forest);cursor:pointer}
+/* hero */
+.hero{position:relative;min-height:min(78vh,680px);display:flex;align-items:flex-end;color:var(--white);overflow:hidden}
+.hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(18,30,6,.15) 0%,rgba(18,30,6,.35) 45%,rgba(18,30,6,.85) 100%)}
+.hero .wrap{position:relative;z-index:2;padding-block:70px 60px;width:100%}
+.eyebrow{display:inline-block;background:var(--lime);color:var(--forest);font-weight:800;font-size:13px;letter-spacing:.08em;text-transform:uppercase;padding:6px 14px;border-radius:999px}
+.hero h1{font-size:clamp(40px,7vw,78px);line-height:1.02;margin:18px 0 14px;font-weight:800;letter-spacing:-.02em}
+.hero p{font-size:clamp(17px,2vw,21px);max-width:620px;margin:0 0 28px;color:#eef2e2}
+.hero .actions{display:flex;flex-wrap:wrap;gap:12px}
+.hero .btn.ghost{color:var(--white)!important;border-color:rgba(255,255,255,.7)}
+.hero .btn.ghost:hover{background:rgba(255,255,255,.12)}
+/* stats */
+.stats{background:var(--forest);color:var(--white)}
+.stats .wrap{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;padding-block:28px}
+.stat b{display:block;font-size:30px;color:var(--lime);font-weight:800;line-height:1.1}
+.stat span{font-size:15px;color:#d8e0c6}
+/* sections */
+section{padding-block:90px}
+.kicker{color:var(--forest-2);font-weight:800;font-size:14px;letter-spacing:.1em;text-transform:uppercase}
+h2{font-size:clamp(30px,4vw,46px);line-height:1.1;margin:10px 0 18px;letter-spacing:-.015em;color:var(--forest)}
+.lead{font-size:19px;color:var(--muted);max-width:720px}
+.about{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
+.about figure{margin:0;position:relative}
+.about figure img{border-radius:var(--radius);box-shadow:var(--shadow);aspect-ratio:4/3;object-fit:cover;width:100%}
+.quote{position:absolute;left:-24px;bottom:-28px;max-width:330px;background:var(--lime);color:var(--forest);padding:20px 22px;border-radius:16px;font-weight:700;font-size:16px;line-height:1.45;box-shadow:var(--shadow)}
+.checks{list-style:none;padding:0;margin:24px 0 0;display:grid;gap:12px}
+.checks li{display:flex;gap:12px;align-items:flex-start}
+.checks li::before{content:"";flex:0 0 22px;height:22px;margin-top:3px;border-radius:50%;background:var(--lime) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='none' stroke='%23263E0E' stroke-width='3' d='M6 12.5l4 4 8-9'/%3E%3C/svg%3E") center/14px no-repeat}
+/* services */
+.services{background:var(--white);border-block:1px solid var(--line)}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:40px}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:22px 20px;transition:.2s}
+.card:hover{transform:translateY(-3px);box-shadow:var(--shadow);border-color:var(--lime)}
+.card .ic{width:44px;height:44px;border-radius:12px;background:var(--lime-soft);display:grid;place-items:center;margin-bottom:14px}
+.card .ic svg{width:24px;height:24px;stroke:var(--forest);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.card h3{margin:0;font-size:17px;color:var(--forest);line-height:1.3}
+.note{margin-top:26px;color:var(--muted);font-size:16px}
+/* process */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:40px;counter-reset:s}
+.step{position:relative;padding:26px 22px;border-radius:16px;background:var(--forest);color:#e8eed8}
+.step::before{counter-increment:s;content:counter(s);display:grid;place-items:center;width:40px;height:40px;border-radius:50%;background:var(--lime);color:var(--forest);font-weight:800;margin-bottom:14px}
+.step h3{margin:0 0 6px;color:var(--white);font-size:18px}
+.step p{margin:0;font-size:15px}
+/* gallery */
+.gallery{display:grid;grid-auto-flow:dense;grid-template-columns:repeat(4,1fr);grid-auto-rows:210px;gap:12px;margin-top:40px}
+.gallery a{border-radius:14px;overflow:hidden;position:relative}
+.gallery img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.gallery a:hover img{transform:scale(1.05)}
+.gallery .big{grid-column:span 2;grid-row:span 2}
+/* lightbox */
+.lb{position:fixed;inset:0;background:rgba(12,18,6,.92);display:none;align-items:center;justify-content:center;z-index:50;padding:20px}
+.lb.on{display:flex}
+.lb img{max-height:88vh;border-radius:12px}
+.lb button{position:absolute;top:16px;right:20px;background:none;border:0;color:#fff;font-size:38px;cursor:pointer}
+/* contact */
+.contact{background:linear-gradient(135deg,var(--forest) 0%,#1b2d09 100%);color:#e8eed8}
+.contact h2{color:var(--white)}
+.contact .lead{color:#cdd8b6}
+.cgrid{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;margin-top:36px;align-items:start}
+.cbox{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:18px;padding:28px}
+.person{font-size:22px;font-weight:800;color:var(--white)}
+.role{color:var(--lime);font-weight:700;margin-bottom:18px}
+.cline{display:flex;gap:12px;align-items:center;margin:10px 0;font-size:19px;font-weight:600}
+.cline a{text-decoration:none;color:var(--white)}
+.cline a:hover{color:var(--lime)}
+.cline svg{width:22px;height:22px;stroke:var(--lime);fill:none;stroke-width:2}
+.small{font-size:15px;color:#c1cca9;line-height:1.7}
+.small b{color:#e8eed8}
+.contact .btn{background:var(--lime);border-color:var(--lime);color:var(--forest)!important}
+.contact .btn:hover{background:#c6d058}
+footer{background:#121d06;color:#9fac85;font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-block:22px}
+/* responsive */
+@media (max-width:980px){
+  .grid{grid-template-columns:repeat(2,1fr)}
+  .steps{grid-template-columns:repeat(2,1fr)}
+  .about,.cgrid{grid-template-columns:1fr}
+  .quote{position:static;margin-top:-30px;margin-left:16px;max-width:none}
+  .gallery{grid-template-columns:repeat(2,1fr);grid-auto-rows:170px}
+}
+@media (max-width:760px){
+  .menu{display:none;position:absolute;top:70px;left:0;right:0;background:var(--paper);flex-direction:column;padding:20px;border-bottom:1px solid var(--line)}
+  .menu.open{display:flex}
+  .burger{display:block}
+  section{padding-block:64px}
+  .stats .wrap{grid-template-columns:1fr;gap:14px}
+  .grid{grid-template-columns:1fr 1fr}
+  .steps{grid-template-columns:1fr}
+}
+@media (max-width:420px){.grid{grid-template-columns:1fr}.gallery .big{grid-column:span 2;grid-row:span 1}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#top" aria-label="Stavba s radostí – úvod"><img src="img/logo.svg" alt="Stavba s radostí"></a>
+    <nav class="menu" id="menu">
+      <a href="#o-nas">O nás</a>
+      <a href="#sluzby">Služby</a>
+      <a href="#postup">Jak pracujeme</a>
+      <a href="#galerie">Fotogalerie</a>
+      <a class="btn" href="#kontakt">Poptat služby</a>
+    </nav>
+    <button class="burger" aria-label="Menu" onclick="document.getElementById('menu').classList.toggle('open')">☰</button>
+  </div>
+</header>
+
+<main id="top">
+  <div class="hero">
+    <img src="img/foto01.jpg" alt="Dokončený rodinný dům">
+    <div class="wrap">
+      <span class="eyebrow">Stavební firma ze šumavského podhůří</span>
+      <h1>Stavíme<br>s radostí</h1>
+      <p>Rekonstrukce, novostavby, dřevostavby i půdní vestavby v jižních Čechách. Ucelené řešení – přehledně a srozumitelně.</p>
+      <div class="actions">
+        <a class="btn" href="#kontakt">Nezávazná poptávka</a>
+        <a class="btn ghost" href="#sluzby">Co děláme</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="stats">
+    <div class="wrap">
+      <div class="stat"><b>20+ let</b><span>praxe v oboru</span></div>
+      <div class="stat"><b>Jižní Čechy</b><span>pracujeme výhradně v regionu</span></div>
+      <div class="stat"><b>Zdarma</b><span>návštěva, návrh řešení a rozpočet</span></div>
+    </div>
+  </div>
+
+  <section id="o-nas">
+    <div class="wrap about">
+      <div>
+        <div class="kicker">O nás</div>
+        <h2>Stavba nemusí být starost. Může být radost.</h2>
+        <p class="lead">Uvědomujeme si, že pro mnohé z vás je stavba či rekonstrukce domu náročný úkon, se kterým si nemusíte vždy vědět rady. Naší hlavní prioritou je nabídnout vám ucelené řešení vašich požadavků – přehledně a srozumitelně.</p>
+        <ul class="checks">
+          <li>Nabídku stavíme na více než dvacetileté praxi v oboru.</li>
+          <li>Pracujeme výhradně v jižních Čechách, kde máme bohaté kontakty na všechna řemesla.</li>
+          <li>Co sami nepokryjeme, doporučíme spolehlivého řemeslníka nebo firmu.</li>
+          <li>Kromě stavebních prací nabízíme i poradenství a projektovou dokumentaci.</li>
+        </ul>
+      </div>
+      <figure>
+        <img src="img/foto04.jpg" alt="Stavba krovu">
+        <div class="quote">„Snažíme se být ke svým zákazníkům komunikativní, vstřícní a celý proces zrealizovat tak, aby byla radost s námi stavět.“</div>
+      </figure>
+    </div>
+  </section>
+
+  <section id="sluzby" class="services">
+    <div class="wrap">
+      <div class="kicker">Služby</div>
+      <h2>Kompletní stavební práce pod jednou střechou</h2>
+      <p class="lead">Nabízíme ucelený sortiment stavebních prací, vyhotovíme projektovou dokumentaci a poskytujeme poradenskou činnost.</p>
+      <div class="grid">
+        <div class="card"><div class="ic"><svg viewBox="0 0 24 24"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/><path d="M10 20v-5h4v5"/></svg></div><h3>Rekonstrukce starých domů a venkovských stavení</h3></div>
+        <div class="card"><div class="ic"><svg viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="1"/><path d="M8 7h3M13 7h3M8 11h3M13 11h3M8 15h3M13 15h3"/></svg></div><h3>Rekonstrukce bytů</h3></div>
+        <div class="card"><div class="ic"><svg viewBox="0 0 24 24"><path d="M3 21h18"/><path d="M5 21V9l7-5 7 5v12"/><path d="M9 21v-6h6v6"/></svg></div><h3>Realizace novostaveb</h3></div>
+        <div class="card"><div class="ic"><svg viewBox="0 0 24 24"><path d="M4 20V8l8-5 8 5v12"/><path d="M8 20v-8M12 20v-8M16 20v-8"/></svg></div><h3>Dřevostavby</h3></div>
+        <div class="card"><div class="ic"><svg viewBox="0 0 24 24"><path d="M3 20L12 4l9 16z"/><path d="M8 20v-5h8v5"/></svg></div><h3>Půdní vestavby</h3></div>
+        <div class="card"><div class="ic"><svg viewBox="0 0 24 24"><path d="M3 10l9-6 9 6"/><path d="M4 9l8 5 8-5"/></svg></div><h3>Opravy a rekonstrukce střech</h3></div>
+        <div class="card"><div class="ic"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="1"/><path d="M3 9h18M3 14h18M9 4v16M15 4v16"/></svg></div><h3>Zateplování budov</h3></div>
+        <div class="card"><div class="ic"><svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16"/><path d="M4 12h16M12 4v16"/></svg></div><h3>Sádrokartony</h3></div>
+        <div class="card"><div class="ic"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="8" height="8"/><rect x="13" y="3" width="8" height="8"/><rect x="3" y="13" width="8" height="8"/><rect x="13" y="13" width="8" height="8"/></svg></div><h3>Obklady a dlažby</h3></div>
+        <div class="card"><div class="ic"><svg viewBox="0 0 24 24"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></svg></div><h3>Elektroinstalace</h3></div>
+        <div class="card"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3c3 4 6 7 6 11a6 6 0 0 1-12 0c0-4 3-7 6-11z"/></svg></div><h3>Vodoinstalace</h3></div>
+        <div class="card"><div class="ic"><svg viewBox="0 0 24 24"><path d="M4 21V8M10 21V8M16 21V8M20 21V8"/><path d="M2 12h20M2 17h20"/></svg></div><h3>Ploty</h3></div>
+      </div>
+      <p class="note">Nenašli jste, co potřebujete? Ozvěte se – co nezvládneme sami, rádi doporučíme ověřeného řemeslníka.</p>
+    </div>
+  </section>
+
+  <section id="postup">
+    <div class="wrap">
+      <div class="kicker">Jak pracujeme</div>
+      <h2>Od první návštěvy po hotovou stavbu</h2>
+      <div class="steps">
+        <div class="step"><h3>Návštěva zdarma</h3><p>Přijedeme k vám a probereme, co potřebujete.</p></div>
+        <div class="step"><h3>Návrh řešení</h3><p>Navrhneme ideální řešení podle vašich požadavků.</p></div>
+        <div class="step"><h3>Ucelený rozpočet</h3><p>Předložíme přehledný rozpočet celé zakázky.</p></div>
+        <div class="step"><h3>Rozhodnete se sami</h3><p>Nezávazně – a pak stavíme s radostí.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="galerie" class="services">
+    <div class="wrap">
+      <div class="kicker">Fotogalerie</div>
+      <h2>Z našich staveb</h2>
+      <div class="gallery">
+        <a class="big" href="img/foto01.jpg"><img loading="lazy" src="img/foto01.jpg" alt="Rodinný dům"></a>
+        <a href="img/foto03.jpg"><img loading="lazy" src="img/foto03.jpg" alt="Půdní vestavba"></a>
+        <a href="img/foto02.jpg"><img loading="lazy" src="img/foto02.jpg" alt="Podkroví"></a>
+        <a href="img/foto05.jpg"><img loading="lazy" src="img/foto05.jpg" alt="Hrubá stavba"></a>
+        <a href="img/foto06.jpg"><img loading="lazy" src="img/foto06.jpg" alt="Instalace"></a>
+        <a class="big" href="img/foto09.jpg"><img loading="lazy" src="img/foto09.jpg" alt="Fasáda rodinného domu"></a>
+        <a href="img/foto08.jpg"><img loading="lazy" src="img/foto08.jpg" alt="Lešení a fasáda"></a>
+        <a href="img/foto07.jpg"><img loading="lazy" src="img/foto07.jpg" alt="Práce na fasádě"></a>
+        <a href="img/foto04.jpg"><img loading="lazy" src="img/foto04.jpg" alt="Krov"></a>
+        <a href="img/foto10.jpg"><img loading="lazy" src="img/foto10.jpg" alt="Rekonstrukce fasády"></a>
+      </div>
+    </div>
+  </section>
+
+  <section id="kontakt" class="contact">
+    <div class="wrap">
+      <div class="kicker" style="color:var(--lime)">Kontakt</div>
+      <h2>Spojte se s námi</h2>
+      <p class="lead">Napište nebo zavolejte – ozveme se a rádi vám pomůžeme.</p>
+      <div class="cgrid">
+        <div class="cbox">
+          <div class="person">Mgr. Jan Loquenz</div>
+          <div class="role">jednatel</div>
+          <div class="cline"><svg viewBox="0 0 24 24"><path d="M5 3h4l2 5-3 2a12 12 0 0 0 6 6l2-3 5 2v4a2 2 0 0 1-2 2A18 18 0 0 1 3 5a2 2 0 0 1 2-2z"/></svg><a href="tel:+420724968331">+420 724 968 331</a></div>
+          <div class="cline"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg><a href="mailto:info@stavbasradosti.cz">info@stavbasradosti.cz</a></div>
+          <p style="margin-top:22px"><a class="btn" href="mailto:info@stavbasradosti.cz?subject=Popt%C3%A1vka%20stavebn%C3%ADch%20prac%C3%AD">Poslat poptávku</a></p>
+        </div>
+        <div class="small">
+          <p><b>Sídlo firmy</b><br>Libotyně 4<br>384 81 Radhostice</p>
+          <p><b>Fakturační údaje</b><br>LQ Group s.r.o.<br>Boušice 8, Benešov u Prahy<br>IČO 08043515 · DIČ CZ08043515</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Stavba s radostí · LQ Group s.r.o.</span>
+    <span>Náhled nového webu – návrh k připomínkování</span>
+  </div>
+</footer>
+
+<div class="lb" id="lb" onclick="this.classList.remove('on')"><button aria-label="Zavřít">×</button><img id="lbimg" alt=""></div>
+<script>
+document.querySelectorAll('.gallery a').forEach(a=>a.addEventListener('click',e=>{e.preventDefault();document.getElementById('lbimg').src=a.getAttribute('href');document.getElementById('lb').classList.add('on')}));
+document.querySelectorAll('.menu a').forEach(a=>a.addEventListener('click',()=>document.getElementById('menu').classList.remove('open')));
+</script>
+</body>
+</html>
